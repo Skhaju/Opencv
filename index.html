@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap">
+  <title>Welcome Page</title>
+  <style>
+     body {
+        font-family: poppins;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./Login/bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            /* semi-transparent white background */
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 0 10px rgba(255, 255, 255, 0.2);
+            animation: form-appear 1s ease forwards;
+            
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            margin: 15px;
+            background-color: #ffffff;
+            /* blue border */
+            border-radius: 15px;
+            color:#ffffff;
+            background-color:#132d7d;
+            font-size: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            /* smooth transitions */
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 72px;
+            /* larger font size */
+            color: #184274;
+            /* matching blue color */
+            margin: 5px;
+            /* spacing */
+            animation: slideInLeft 1s ease-in-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        p {
+            font-size: 22px;
+            /* larger font size */
+            color: #184274;
+            /* dark grey text */
+            margin: 5px;
+            /* spacing */
+            animation: slideInRight 1s ease-in-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .btn:hover {
+            background-color: #2c41b3;
+            color:white;
+            border-color: #356bac;
+            /* matching border color */
+        
+            /* white text on hover */
+        }
+    </style>
+</head>
+<body>
+  <!-- <div class="img"><img src=".//Login/center.jpg" alt=""></div> -->
+  <div class="container">
+    <h1>Welcome!</h1>
+    <p>Choose an option below:</p>
+    <a href="home.py" class="btn">Start Face Recognition</a>
+    <a href="login.php" class="btn">Admin Login</a>
+  </div>
+</body>
+</html>
